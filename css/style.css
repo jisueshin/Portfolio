@@ -1,0 +1,198 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #FEFCFB; 
+}
+
+a{
+    text-decoration: none;
+    color:#2F2D2E;
+}
+
+p{
+    color: #2F2D2E; 
+}
+
+h1{
+    color: #2F2D2E;   
+}
+
+h3{
+    color: #2F2D2E; 
+}
+
+nav{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.logo{
+    font-size: 30px;
+    flex-grow: 1;
+}
+
+.introduction{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    margin-bottom: 170px;
+}
+
+#greeting{
+    font-size: 50px;
+}
+
+#intro-text{
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: 70px;
+}
+
+.projects{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    width: 80%;
+    display: flex;
+    gap: 20px;
+}
+
+.hci-projects{
+    flex-grow: 1;
+    /*border: 2px solid black;*/ 
+}
+
+.research{
+    flex-grow: 1;
+    border-right: 1px solid gray; 
+    padding-right: 15px;
+    /*border: 2px solid black;*/
+}
+
+.col-header{
+    font-size: 40px;
+    font-weight: 700;
+    color: #3066BE; 
+    margin-top: 0;
+}
+
+.project-image{
+    display: block;
+    width: 550px;
+}
+
+.research-paper{
+    margin-bottom: 50px;
+}
+
+.research-paper:hover .paper-title{
+    text-decoration: underline;
+}
+
+.paper-title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.paper-blurb{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.HCI-tag{
+    display: inline;
+    width: fit-content;
+    font-size: 20px;
+    padding: 2px 10px 2px 10px; 
+    border: 2px solid black;
+    border-radius: 20px;
+    opacity: 0.5;
+}
+
+.see-more{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 80%;
+    text-align: right; 
+    font-size: 20px;
+}
+
+footer{
+    margin-top: 100px;
+    background-color: #3066BE; 
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+footer p {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-text{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer-title{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* work CSS */
+
+.work-research{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.work-projects{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* about me CSS */
+.about-container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 120px;
+    margin-bottom: 200px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-text{
+    flex-shrink: 1;
+}
+
+.about-greeting{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.about-detail{
+    font-size: 25px;
+}
+
+#me-pic{
+    flex-grow: 1;
+    width: 250px;
+}
+
