@@ -8,7 +8,7 @@ class Research {
 new Research("hello", "hi")
 
 const papers = [
-    ["Ethics and Perception of AI-generated Images in Political Campaigns", "hihi"],
+    ["Ethics and Perception of AI-generated Images in Political Campaigns", "FATE fall 2023"],
     ["Clinton and Bush Administrations' Approach to Denuclearization of North Korea: a Decision Science Perspective", "hi2"],
     ["Lynching in Post-Reconstruction America", "blurb"]
 ]
@@ -22,7 +22,8 @@ function expandResearch(){
     if (expanded == false){
         for (const paper of papers){
             let title = paper[0];
-            addPaper(paper, title);
+            let courseInfo = paper[1];
+            addPaper(paper, title, courseInfo);
         }
         expanded = true; 
     }
@@ -32,29 +33,20 @@ function expandResearch(){
     }
 }
 
-function addPaper(paper, title){
+function addPaper(paper, title, courseInfo){
     const template = document.querySelector('#paper-template');
     const clone = template.content.cloneNode(true);
     let newPaper = clone.querySelector("#work-paper");
     newPaper.innerText = title;
+    let newPaperInfo = clone.querySelector(".paper-course");
+    newPaperInfo.innerText = courseInfo;
     const researchContainer = document.querySelector(".work-research");
     researchContainer.append(newPaper);
+    researchContainer.append(newPaperInfo);
 }
 
 function closeResearch(){
     let currentPapers = document.querySelectorAll("#work-paper");
     currentPapers.forEach((currPaper) => currPaper.remove());
 }
-/*function expandResearch(paper){
-    const template = document.querySelector('#paper-template');
-    const clone = template.content.cloneNode(true);
-    paper.element = clone.querySelector("#work-paper");
-    const researchContainer = document.querySelector(".work-research");
-    researchContainer.append(paper.element);
-    updatePaper()
-}
 
-function updatePaper(paper){
-    let title = paper[0]
-    paper.element.innerText = title;   
-}*/
