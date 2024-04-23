@@ -8,7 +8,7 @@ const allWork = [{
 },
 {
     "title": "Clinton and Bush Administrations' Approach to Denuclearization of North Korea: a Decision Science Perspective",
-    "course": "Decision Science",
+    "course": "Decision-Science",
     "date": "Fall 2022",
     "relTags": ["Intl Relations", "Dec Science"],
     "imageFile": "Decision Science.jpg",
@@ -16,7 +16,7 @@ const allWork = [{
 },
 {
     "title": "Amarah Case Study",
-    "course": "Service Design",
+    "course": "Service-Design",
     "date": "Fall 2023",
     "relTags": ["HCI", "Service Design"],
     "imageFile": "amarah-crop.png",

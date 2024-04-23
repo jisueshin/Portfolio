@@ -9,7 +9,7 @@ class work {
     }
 }
 
-workSet = new Set()
+workArray = []
 
 for (const workItem of allWork){
     let workTitle = workItem.title;
@@ -19,83 +19,54 @@ for (const workItem of allWork){
     let workImageFile = workItem.imageFile;
     let workType = workItem.workType;
     let workObject = new work(workTitle, workCourse, workDate, workTags, workImageFile, workType);
-    workSet.add(workObject);
+    workArray.push(workObject);
 }
 
-for (const workItem of workSet){
+for (const workItem of workArray){
     addWork(workItem);
 }
 
 function addWork(workItem){
-    const template = document.querySelector('#research-template');
+    const template = document.querySelector('#work-template');
     const clone = template.content.cloneNode(true);
-    let researchBlock = clone.querySelector(".research-block");
-    let researchContainer = document.querySelector(".research-row");
+    let workBlock = clone.querySelector(".work-block");
+    let researchContainer = document.querySelector(".research-grid");
     let projectsContainer = document.querySelector(".projects-grid");
     let currWorkType = workItem.workType;
     if (currWorkType == "research"){
-        researchContainer.append(researchBlock)
+        researchContainer.append(workBlock);
     }
     else{
-        projectsContainer.append(researchBlock)
+        projectsContainer.append(workBlock);
+        let projectIndex = workArray.indexOf(workItem);
+        let projectBlockID = "project-block" + projectIndex;
+        workBlock.setAttribute("id", projectBlockID);
     };
-    updateWorkDisplay(workItem, researchBlock);
+    updateWorkDisplay(workItem, workBlock);
 }
 
-function updateWorkDisplay(workItem, researchBlock){
-    let researchTitle = researchBlock.querySelector(".research-title");
-    researchTitle.innerText = workItem.title;
-    let researchImg = researchBlock.querySelector(".research-img");
-    researchImg.src = "assets/" + workItem.imageFile;
-    let tagRow = researchBlock.querySelector(".tag-row");
+function updateWorkDisplay(workItem, workBlock){
+    /*inserting link to each work block */
+    let currWorkLink = "detail.html?work=" + workItem.course;
+    workBlock.href = currWorkLink;
+    console.log(workBlock.href)
+    /*updating title */
+    let currWorkTitle = workBlock.querySelector(".work-title");
+    currWorkTitle.innerText = workItem.title;
+    /*updating img */
+    let currWorkImg = workBlock.querySelector(".work-img");
+    currWorkImg.src = "assets/" + workItem.imageFile;
+    /*updating tags */
+    let tagRow = workBlock.querySelector(".tag-row");
     for (const tagItem of workItem.relTags){
         let tagDisplay = document.createElement("p");
         tagDisplay.textContent = tagItem;
         tagDisplay.setAttribute("class", "HCI-tag");
         tagRow.appendChild(tagDisplay);
     }
-    /*for (const tag of paperTags){
-        console.log(tag)
-        let tagDisplay = document.createElement("p");
-        tagDisplay.textContent = tag;
-        tagDisplay.setAttribute("class", "HCI-tag")
-        console.log(tagDisplay)
-        tagRow.appendChild(tagDisplay);
-    }*/
 }
 
-for (const paper of allResearch){
-    let paperTitle = paper.title;
-    let paperCourse = paper.course;
-    let paperTags = paper.tags;
-    addPaper(paperTitle, paperCourse, paperTags);
-}
 
-/*TODO: one function can add all but have diff formatting based on classification? */
-function addPaper(paperTitle, paperCourse, paperTags){
-    const template = document.querySelector('#research-template');
-    const clone = template.content.cloneNode(true);
-    let researchBlock = clone.querySelector(".research-block");
-    const researchContainer = document.querySelector(".research-row");
-    researchContainer.append(researchBlock);
-    updatePaper(researchBlock, paperTitle, paperCourse, paperTags);
-}
-
-function updatePaper(researchBlock, paperTitle, paperCourse, paperTags){
-    let researchTitle = researchBlock.querySelector(".research-title");
-    researchTitle.innerText = paperTitle;
-    let researchImg = researchBlock.querySelector(".research-img");
-    researchImg.src = "assets/" + paperCourse + ".jpg";
-    let tagRow = researchBlock.querySelector(".tag-row");
-    for (const tag of paperTags){
-        console.log(tag)
-        let tagDisplay = document.createElement("p");
-        tagDisplay.textContent = tag;
-        tagDisplay.setAttribute("class", "HCI-tag")
-        console.log(tagDisplay)
-        tagRow.appendChild(tagDisplay);
-    }
-}
 
 /*function addTags(paperTags){
     let tagRow = document.querySelector(".tag-row");

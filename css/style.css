@@ -174,21 +174,26 @@ footer p {
     margin-bottom: 50px;
 }
 
-.research-row{
+.research-grid{
     display: flex;
     width: 80%;
-    gap: 50px;
+    gap: 5%;
 }
 
-.research-block{
+.work-block{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.work-block:hover .work-title{
+    color: #3066BE;  
+}
+
+.work-img{
     width: 100%;
 }
 
-.research-img{
-    width: 100%;
-}
-
-.research-title{
+.work-title{
     width: 100%;
     font-size: 20px;
     font-weight: 600;
@@ -196,7 +201,7 @@ footer p {
 
 .tag-row{
     display: flex;
-    gap: 10px;
+    gap: 3%;
     margin: 0;
     padding: 0;
 }
@@ -207,9 +212,29 @@ footer p {
     margin-right: auto;
 }
 
+.projects-grid{
+    display: flex;
+    gap: 1%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 #research-header:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+
+#project-block2{
+
+    width: 58%;
+}
+#project-block3{
+    
+    width: 40%;
+}
+#project-block4{
+    width: 40%;
+    
 }
 
 /* about me CSS */
@@ -243,3 +268,28 @@ footer p {
     width: 250px;
 }
 
+/* detail page css */
+.detail-title{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.detail-date{
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.detail-img{
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
