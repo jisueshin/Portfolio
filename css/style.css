@@ -173,6 +173,32 @@ footer p {
     margin-bottom: 50px;
 }
 
+.research-row{
+    display: flex;
+    width: 80%;
+    gap: 30px;
+    border: 2px solid black;
+}
+
+.research-block{
+    width: 100%;
+    border: 2px solid black;
+}
+
+.research-img{
+    width: 100%;
+}
+
+.research-title{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tag-row{
+    display: flex;
+    gap: 10px;
+}
 .work-projects{
     width: 80%;
     margin-left: auto;

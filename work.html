@@ -3,7 +3,9 @@
   <head>
     <title>About Me</title>
     <link rel="stylesheet" href="css/style.css"> 
+    <script defer src="js/all-work-data.js"></script>
     <script defer src="js/work.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -19,11 +21,18 @@
 
     <div class = "work-research">
         <p class = "col-header" id = "research-header">Research</p>
+        <div class = "research-row">
 
-        <template id = "paper-template">
-            <p class = "paper-title" id = "work-paper">ethics</p>
-            <p class = "paper-course"></p>
-        </template>
+            <template id = "research-template">
+                <div class = "research-block">
+                    <img class = "research-img">
+                    <p class = "research-title"></p>
+                    <div class = "tag-row">
+                    </div>
+                </div>
+            </template>
+
+        </div>
     </div>
 
     <div class = "work-projects">
