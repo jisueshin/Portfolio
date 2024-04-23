@@ -1,3 +1,69 @@
+class work {
+    constructor(workTitle, workCourse, workDate, workTags, workImageFile, workType){
+        this.title = workTitle;
+        this.course = workCourse;
+        this.date = workDate;
+        this.relTags = workTags;
+        this.imageFile = workImageFile;
+        this.workType = workType;
+    }
+}
+
+workSet = new Set()
+
+for (const workItem of allWork){
+    let workTitle = workItem.title;
+    let workCourse = workItem.course;
+    let workDate = workItem.date;
+    let workTags = workItem.relTags;
+    let workImageFile = workItem.imageFile;
+    let workType = workItem.workType;
+    let workObject = new work(workTitle, workCourse, workDate, workTags, workImageFile, workType);
+    workSet.add(workObject);
+}
+
+for (const workItem of workSet){
+    addWork(workItem);
+}
+
+function addWork(workItem){
+    const template = document.querySelector('#research-template');
+    const clone = template.content.cloneNode(true);
+    let researchBlock = clone.querySelector(".research-block");
+    let researchContainer = document.querySelector(".research-row");
+    let projectsContainer = document.querySelector(".projects-grid");
+    let currWorkType = workItem.workType;
+    if (currWorkType == "research"){
+        researchContainer.append(researchBlock)
+    }
+    else{
+        projectsContainer.append(researchBlock)
+    };
+    updateWorkDisplay(workItem, researchBlock);
+}
+
+function updateWorkDisplay(workItem, researchBlock){
+    let researchTitle = researchBlock.querySelector(".research-title");
+    researchTitle.innerText = workItem.title;
+    let researchImg = researchBlock.querySelector(".research-img");
+    researchImg.src = "assets/" + workItem.imageFile;
+    let tagRow = researchBlock.querySelector(".tag-row");
+    for (const tagItem of workItem.relTags){
+        let tagDisplay = document.createElement("p");
+        tagDisplay.textContent = tagItem;
+        tagDisplay.setAttribute("class", "HCI-tag");
+        tagRow.appendChild(tagDisplay);
+    }
+    /*for (const tag of paperTags){
+        console.log(tag)
+        let tagDisplay = document.createElement("p");
+        tagDisplay.textContent = tag;
+        tagDisplay.setAttribute("class", "HCI-tag")
+        console.log(tagDisplay)
+        tagRow.appendChild(tagDisplay);
+    }*/
+}
+
 for (const paper of allResearch){
     let paperTitle = paper.title;
     let paperCourse = paper.course;
