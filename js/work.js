@@ -1,13 +1,11 @@
-console.log(allWork[0].title)
-
-for (const paper of allWork){
+for (const paper of allResearch){
     let paperTitle = paper.title;
     let paperCourse = paper.course;
     let paperTags = paper.tags;
     addPaper(paperTitle, paperCourse, paperTags);
-    /*addTags(paperTags);*/
 }
 
+/*TODO: one function can add all but have diff formatting based on classification? */
 function addPaper(paperTitle, paperCourse, paperTags){
     const template = document.querySelector('#research-template');
     const clone = template.content.cloneNode(true);
