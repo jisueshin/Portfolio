@@ -49,7 +49,6 @@ function updateWorkDisplay(workItem, workBlock){
     /*inserting link to each work block */
     let currWorkLink = "detail.html?work=" + workItem.course;
     workBlock.href = currWorkLink;
-    console.log(workBlock.href)
     /*updating title */
     let currWorkTitle = workBlock.querySelector(".work-title");
     currWorkTitle.innerText = workItem.title;

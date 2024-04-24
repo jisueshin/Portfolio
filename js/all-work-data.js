@@ -35,7 +35,7 @@ const allWork = [{
     "course": "UCRE",
     "date": "Spring 2023",
     "relTags": ["HCI", "UX Research"],
-    "imageFile": "FATE.jpg",
+    "imageFile": "faire.jpeg",
     "workType": "project"
 }]
 
