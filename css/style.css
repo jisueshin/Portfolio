@@ -499,7 +499,7 @@ footer p {
     margin-top: 120px;
     margin-bottom: 200px;
     display: flex;
-    gap: 40px;
+    gap: 5%;
     align-items: flex-start;
 }
 
@@ -519,7 +519,39 @@ footer p {
 
 #me-pic{
     flex-grow: 1;
-    width: 250px;
+    width: 25%;
+}
+
+/*transitioning to smaller screen*/
+@media only screen and (max-width: 800px){
+    .about-container{
+        width: 90%;
+    }
+    
+    .about-greeting{
+        font-size: 20px;
+    }
+
+    .about-detail{
+        font-size: 15px;
+    }
+}
+
+/*transitioning to smaller screen*/
+@media only screen and (max-width: 350px){
+    .about-container{
+        margin-top: 50px;
+    }
+
+    .about-greeting{
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .about-detail{
+        font-size: 12px;
+    }
+
 }
 
 /* detail page css ********************************************************/
