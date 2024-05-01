@@ -183,7 +183,7 @@ footer p {
         width: 90%;
     }
 
-    .tag-row{
+    .home-tags{
         display: none;
     }
 
@@ -249,7 +249,7 @@ footer p {
         font-size: 17px;
     }
 
-    .tag-row{
+    .home-tags{
         display: none;
     }
 
@@ -314,18 +314,52 @@ footer p {
 }
 
 #project-block2{
-
     width: 58%;
 }
 #project-block3{
-    
     width: 40%;
 }
 #project-block4{
     width: 40%;
-    
 }
 
+@media only screen and (max-width: 1000px){
+    /*.research-grid{
+        flex-direction: column;
+    }
+
+    .projects-grid{
+        flex-direction: column;
+    }*/
+
+    .research-grid{
+        width: 100%;
+    }
+
+    .projects-grid{
+        width: 100%;
+    }
+
+    .work-title{
+        font-size: 17px;
+    }
+
+    .HCI-tag{
+        font-size: 15px;
+    }
+
+    .tag-row{
+        flex-wrap: wrap;
+        gap: 5px 5px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .research-grid{
+        width: 80%;
+        flex-direction: column;
+    }
+}
 /* about me CSS ********************************************************/
 .about-container{
     width: 80%;
