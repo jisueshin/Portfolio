@@ -12,6 +12,7 @@ class work {
 
 workArray = []
 
+/*inputting file as objects ******************************************/
 for (const workItem of allWork){
     let workTitle = workItem.title;
     let workCourse = workItem.course;
@@ -33,8 +34,8 @@ for (const workItem of allWork){
 
     workArray.push(workObject);
 }
-console.log(workArray)
 
+/*creating elements for samples with template*********************************/
 function addSampleWork(project){
     const template = document.querySelector("#sample-template");
     const clone = template.content.cloneNode(true);
@@ -50,6 +51,7 @@ for (const project of workArray){
     } 
 }
 
+/*updating info on template******************************************/
 function updateSampleDisplay(project, sampleBlock){
     /*updating image */
     sampleImage = sampleBlock.querySelector(".sample-image");
@@ -77,28 +79,7 @@ function updateSampleDisplay(project, sampleBlock){
     sampleLink.href = "detail.html?work=" + project.course;
 }
 
-
-function updateWorkDisplay(sampleBlock){
-    /*inserting link to each work block */
-    let currSampleLink = "detail.html?work=" + workItem.course;
-    workBlock.href = currSampleLink;
-    /*updating title */
-    let currWorkTitle = workBlock.querySelector(".work-title");
-    currWorkTitle.innerText = workItem.title;
-    /*updating img */
-    let currWorkImg = workBlock.querySelector(".work-img");
-    currWorkImg.src = "assets/" + workItem.imageFile;
-    currWorkImg.alt = workItem.imageAlt;
-    /*updating tags */
-    let tagRow = workBlock.querySelector(".tag-row");
-    for (const tagItem of workItem.relTags){
-        let tagDisplay = document.createElement("p");
-        tagDisplay.textContent = tagItem;
-        tagDisplay.setAttribute("class", "HCI-tag");
-        tagRow.appendChild(tagDisplay);
-    }
-}
-
+/*animating reveals for templates******************************************/
 function revealSamples(){
     let blocksList = document.querySelectorAll(".sample-block");
     const windowHeight = window.innerHeight; 
@@ -107,7 +88,6 @@ function revealSamples(){
         /*close enough and should reveal */
         if (blockHeight < windowHeight - 100){
             block.style.opacity = 1;
-            /*block.style.transition = "opacity 0.5s ease"*/
             block.style.transform = "translateY(0)"
         }
         /* not close should stay hidden */

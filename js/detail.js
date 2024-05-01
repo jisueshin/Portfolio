@@ -27,9 +27,6 @@ currDate.innerText = currWork.date
 let currCourse = document.querySelector(".detail-course")
 currCourse.innerText = currWork.course
 
-/*let currImg = document.querySelector(".detail-img")
-currImg.src = "assets/" + currWork.imageFile*/
-
 let currTeam = document.querySelector(".detail-team")
 if (currWork.team != null){
     currTeam.innerText = "In collaboration with " + currWork.team
@@ -52,6 +49,7 @@ if (currWork.detailDesc != null){
     detailMain.appendChild(currImg);
     currImg.setAttribute("class", "detail-img");
 
+    /*adding rest of text */
     if (currWork.detailDesc.length > 1){
         for (var i = 1; i < currWork.detailDesc.length; i++){
             let detailPara = document.createElement("p");
@@ -62,6 +60,7 @@ if (currWork.detailDesc != null){
     }
 }
 
+/*animating image reveals */
 function revealImg(){
     let imgsList = document.querySelectorAll(".detail-img");
     const windowHeight = window.innerHeight; 
@@ -70,7 +69,6 @@ function revealImg(){
         /*close enough and should reveal */
         if (blockHeight < windowHeight - 150){
             block.style.opacity = 1;
-            /*block.style.transition = "opacity 0.5s ease"*/
             block.style.transform = "translateY(0)"
         }
         /* not close should stay hidden */

@@ -10,6 +10,7 @@ class work {
     }
 }
 
+/*inputting projects as objects ******************************************/
 workArray = []
 
 for (const workItem of allWork){
@@ -30,6 +31,7 @@ for (const workItem of allWork){
     workArray.push(workObject);
 }
 
+/*creating elements for the projects with template ****************************/
 for (const workItem of workArray){
     addWork(workItem);
 }
@@ -53,6 +55,7 @@ function addWork(workItem){
     updateWorkDisplay(workItem, workBlock);
 }
 
+/*updating info on templates ******************************************/
 function updateWorkDisplay(workItem, workBlock){
     /*inserting link to each work block */
     if (workItem.extraLink != null){
@@ -83,6 +86,7 @@ function updateWorkDisplay(workItem, workBlock){
     }
 }
 
+/*reveal animation for projects ******************************************/
 revealWork()
 
 function revealWork(){
@@ -93,7 +97,6 @@ function revealWork(){
         /*close enough and should reveal */
         if (blockHeight < windowHeight - 100){
             block.style.opacity = 1;
-            /*block.style.transition = "opacity 0.5s ease"*/
             block.style.transform = "translateY(0)"
         }
         /* not close should stay hidden */
