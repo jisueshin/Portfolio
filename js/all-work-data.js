@@ -4,7 +4,10 @@ const allWork = [{
     "date": "Fall 2023",
     "relTags": ["HCI", "U.S. Politics"],
     "imageFile": "FATE.jpg",
-    "workType": "research"
+    "workType": "research",
+    "sampleDisplay": true,
+    "blurb": "How do people perceive AI-generated images? What are the implications of their use in political campaigns?",
+    "team": "Menghan Liu, Takumi Natsume"
 },
 {
     "title": "Clinton and Bush Administrations' Approach to Denuclearization of North Korea: a Decision Science Perspective",
@@ -20,7 +23,10 @@ const allWork = [{
     "date": "Fall 2023",
     "relTags": ["HCI", "Service Design"],
     "imageFile": "amarah-crop.png",
-    "workType": "project"
+    "workType": "project",
+    "sampleDisplay": true,
+    "blurb": "Improving a local business's service design",
+    "team": "Alex Pravat, Tina Chen, Amanda Cheng"
 },
 {
     "title": "Learn Korean App",
@@ -28,7 +34,10 @@ const allWork = [{
     "date": "Spring 2022",
     "relTags": ["Python"],
     "imageFile": "112.png",
-    "workType": "project"
+    "workType": "project",
+    /*"sampleDisplay": true,*/
+    "blurb": "Developing a program to learn Korean in Python",
+    "extraLink": "https://youtu.be/6uF7XWLQlV0"
 },
 {
     "title": "Faire: Fighting Bias in Ride-Sharing Apps",
@@ -36,6 +45,8 @@ const allWork = [{
     "date": "Spring 2023",
     "relTags": ["HCI", "UX Research"],
     "imageFile": "faire.jpeg",
-    "workType": "project"
+    "workType": "project",
+    "team": "Sisley Yang, Claire Xu, Judy Xu",
+    "extraLink": "https://medium.com/@jisues/lessons-i-learned-while-fighting-algorithmic-bias-on-ride-sharing-platforms-dbc0ad68d8a5"
 }]
 

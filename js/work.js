@@ -19,6 +19,12 @@ for (const workItem of allWork){
     let workImageFile = workItem.imageFile;
     let workType = workItem.workType;
     let workObject = new work(workTitle, workCourse, workDate, workTags, workImageFile, workType);
+
+    if (workItem.extraLink != null){
+        workObject.extraLink = workItem.extraLink;
+        console.log(workArray)
+    }
+
     workArray.push(workObject);
 }
 
@@ -47,8 +53,14 @@ function addWork(workItem){
 
 function updateWorkDisplay(workItem, workBlock){
     /*inserting link to each work block */
-    let currWorkLink = "detail.html?work=" + workItem.course;
-    workBlock.href = currWorkLink;
+    if (workItem.extraLink != null){
+        workBlock.href = workItem.extraLink;
+        workBlock.setAttribute("target", "_blank");
+    }
+    else{
+        let currWorkLink = "detail.html?work=" + workItem.course;
+        workBlock.href = currWorkLink;
+    }
     /*updating title */
     let currWorkTitle = workBlock.querySelector(".work-title");
     currWorkTitle.innerText = workItem.title;
@@ -64,6 +76,30 @@ function updateWorkDisplay(workItem, workBlock){
         tagRow.appendChild(tagDisplay);
     }
 }
+
+revealWork()
+
+function revealWork(){
+    let blocksList = document.querySelectorAll(".work-block");
+    const windowHeight = window.innerHeight; 
+    for (const block of blocksList){
+        blockHeight = block.getBoundingClientRect().top
+        console.log(blockHeight)
+        /*close enough and should reveal */
+        if (blockHeight < windowHeight - 100){
+            block.style.opacity = 1;
+            /*block.style.transition = "opacity 0.5s ease"*/
+            block.style.transform = "translateY(0)"
+        }
+        /* not close should stay hidden */
+        else{
+            block.style.opacity = 0;
+            block.style.transform = "translateY(50px)"
+        }
+    }
+}
+
+window.addEventListener("scroll", revealWork)
 
 
 

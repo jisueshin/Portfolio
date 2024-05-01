@@ -64,27 +64,6 @@ nav{
     font-weight: 700;
 }
 
-.projects{
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 10px;
-    width: 80%;
-    display: flex;
-    gap: 20px;
-}
-
-.hci-projects{
-    flex-grow: 1;
-    /*border: 2px solid black;*/ 
-}
-
-.research{
-    flex-grow: 1;
-    border-right: 1px solid gray; 
-    padding-right: 15px;
-    /*border: 2px solid black;*/
-}
-
 .col-header{
     font-size: 30px;
     font-weight: 700;
@@ -92,31 +71,16 @@ nav{
     margin-top: 0;
 }
 
-.project-image{
-    display: block;
-    width: 550px;
-}
-
-.research-paper{
-    margin-bottom: 50px;
-}
-
-#projects-hr{
-    margin-top: 30px;
-}
-
-.research-paper:hover .paper-title{
-    text-decoration: underline;
-}
-
-.paper-title{
+.sample-title{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
-.paper-blurb{
+.sample-blurb{
     margin-top: 10px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 
@@ -131,16 +95,64 @@ nav{
     margin: 0;
 }
 
+.sample-block{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    height: auto;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease; 
+}
+
+.sample-image{
+    width: 400px;
+}
+
+.sample-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 2;
+    padding: 10px;
+}
+
 .see-more{
-    display: block; 
+    /*display: block;*/
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
+    margin-top: auto;
+    margin-bottom: 10px;
     width: 80%;
     text-align: right; 
     font-size: 20px;
     text-decoration: underline;
+    /*justify-self: end;*/
 }
+
+/*
+.project-grid-test{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.project-grid-test .project-image{
+    width: 30%;
+    height: 250px;
+    object-fit: cover;
+}*/
+
 
 footer{
     margin-top: 100px;
@@ -164,7 +176,6 @@ footer p {
     font-size: 30px;
     font-weight: 600;
 }
-
 /* work CSS */
 
 .work-research{
@@ -183,6 +194,10 @@ footer p {
 .work-block{
     width: 100%;
     margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease; 
 }
 
 .work-block:hover .work-title{
@@ -269,21 +284,52 @@ footer p {
 }
 
 /* detail page css */
+.detail-header{
+    background-color: #3066BE;   
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.detail-header p{
+    color: white; 
+}
+
 .detail-title{
     width: 80%;
-    margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-left: auto;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
 }
 
 .detail-date{
-    width: 80%;
-    margin: auto;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.detail-course{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.detail-team{
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.detail-desc{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .detail-img{

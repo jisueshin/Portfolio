@@ -22,5 +22,13 @@ currTitle.innerText = currWork.title
 let currDate = document.querySelector(".detail-date")
 currDate.innerText = currWork.date
 
+let currCourse = document.querySelector(".detail-course")
+currCourse.innerText = currWork.course
+
 let currImg = document.querySelector(".detail-img")
 currImg.src = "assets/" + currWork.imageFile
+
+let currTeam = document.querySelector(".detail-team")
+if (currWork.team != null){
+    currTeam.innerText = "In collaboration with " + currWork.team
+}

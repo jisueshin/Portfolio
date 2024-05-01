@@ -3,7 +3,8 @@
   <head>
     <title>Adrian Shin's Portfolio</title>
     <link rel="stylesheet" href="css/style.css"> 
-    <!--<script defer src="js/work.js"></script>-->
+    <script defer src="js/all-work-data.js"></script>
+    <script defer src="js/home.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,40 +26,25 @@
 
     <p id = "projects-intro">See my recent work:</p>
 
-    <section class = "projects">
-        <div class = "research">
-            <!--use templates-->
-            <p class = "col-header">Research</p>
-
-            <a href = "work.html" class = "research-paper">
-                <p class = "paper-title">Ethics and Perception of AI-generated Images in Political Campaigns
-                </p>
-                <p class = "HCI-tag">U.S. Politics</p>
-                <p class = "HCI-tag">HCI</p>
-            </a>
-
-            <hr id = "projects-hr">
-
-            <a href = "work.html" class = "research-paper">
-                <p class = "paper-title">Clinton and Bush Administrations' Approach to Denuclearization of North Korea: a Decision Science Perspective
-                </p>
-                <p class = "HCI-tag">Intl Relations</p>
-            </a>
-
-        </div>
-
-        <div class = "hci-projects">
-            <p class = "col-header">Projects</p>
-            <a href = "work.html" class = "research-paper">
-                <img class = "project-image" src = "assets/amarah-crop.png">
-                <p class = "paper-title">Amarah</p>
-                <p class = "paper-blurb">Proposing new service design for a local business</p>
-                <p class = "HCI-tag">HCI</p>
-                <p class = "HCI-tag">Case Study</p>
-            </a>
-        </div>
-    </section>
-    <a href = "work.html" class = "see-more">See more ></a>
+    <!--<div class = "project-grid-test">
+        <img class = "project-image" src = "assets/amarah-crop.png">
+        <img class = "project-image" src = "assets/112.png">
+        <img class = "project-image" src = "assets/FATE.jpg">
+    </div>-->
+    <div id = "home-samples">
+        <template id = "sample-template">
+            <div class = "sample-block">
+                <img class = "sample-image">
+                <div class = "sample-text">
+                    <p class = "sample-title"></p>
+                    <p class = "sample-blurb">Creating a new service design for a local business</p>
+                    <div class = "tag-row">
+                    </div>
+                    <a href = "work.html" class = "see-more">See more ></a>
+                </div>
+            </div>
+        </template>
+    </div>
 
     <footer>
         <div class = "footer-text">
