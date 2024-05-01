@@ -65,13 +65,6 @@ nav{
     font-weight: 700;
 }
 
-.col-header{
-    font-size: 30px;
-    font-weight: 700;
-    color: #3066BE; 
-    margin-top: 0;
-}
-
 .sample-title{
     font-size: 25px;
     font-weight: 600;
@@ -290,6 +283,7 @@ footer p {
     nav{
         font-size: 12px;
         gap: 10px;
+        margin-bottom: 10px;
     }
 
     .logo{
@@ -367,6 +361,12 @@ footer p {
     }
 }
 /* work CSS ***************************************************************/
+.col-header{
+    font-size: 30px;
+    font-weight: 700;
+    color: #3066BE; 
+    margin-top: 0;
+}
 
 .work-research{
     width: 80%;
@@ -433,14 +433,6 @@ footer p {
 }
 
 @media only screen and (max-width: 1000px){
-    /*.research-grid{
-        flex-direction: column;
-    }
-
-    .projects-grid{
-        flex-direction: column;
-    }*/
-
     .research-grid{
         width: 100%;
     }
@@ -467,6 +459,36 @@ footer p {
     .research-grid{
         width: 80%;
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .col-header{
+        font-size: 15px;
+    }
+
+    .work-title{
+        font-size: 12px;
+    }
+
+    .HCI-tag{
+        font-size: 10px;
+        padding: 2px 6px 2px 6px; 
+        border: 1px solid black;
+    }
+
+    .projects-grid{
+        flex-direction: column;
+    }
+
+    #project-block2{
+        width: 80%;
+    }
+    #project-block3{
+        width: 80%;
+    }
+    #project-block4{
+        width: 80%;
     }
 }
 /* about me CSS ********************************************************/
@@ -512,6 +534,16 @@ footer p {
     color: white; 
 }
 
+.detail-desc{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
 .detail-title{
     width: 80%;
     margin-right: auto;
@@ -521,6 +553,9 @@ footer p {
     font-weight: 600;
 }
 
+.desc-left{
+    flex-grow: 2;
+}
 .detail-date{
     font-size: 25px;
     font-weight: 500;
@@ -535,19 +570,10 @@ footer p {
 }
 
 .detail-team{
+    flex-grow: 3;
     margin-top: 0;
     font-size: 25px;
     font-weight: 400;
-}
-
-.detail-desc{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
 }
 
 /*detail main css */
@@ -572,4 +598,66 @@ footer p {
 
 .detail-para{
     font-size: 20px;
+}
+
+/*transitioning to smaller screen*/
+@media only screen and (max-width: 700px){
+    .detail-title{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .desc-left p{
+        font-size: 15px;
+    }
+
+    .detail-team{
+        font-size: 15px;
+    }
+
+    .detail-para{
+        font-size: 13px;
+    }
+}
+
+/*phone*/
+@media only screen and (max-width: 350px){
+    .detail-header{
+        padding-bottom: 0;
+    }
+    
+    .detail-title{
+        font-size: 14px;
+        margin-bottom: 10px;
+        width: 90%;
+    }
+
+    .detail-desc{
+        width: 90%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .desc-left p{
+        font-size: 11px;
+        margin-top: 0;
+    }
+
+    .detail-team{
+        font-size: 11px;
+    }
+
+    .detail-main{
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .detail-para{
+        font-size: 11px;
+    }
+
+    .detail-img{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
