@@ -54,6 +54,7 @@ nav{
     font-size: 30px;
     text-decoration: none;
     margin-top: 70px;
+    font-weight: 600;
 }
 
 #projects-intro{
@@ -417,11 +418,6 @@ footer p {
     justify-content: space-between;
 }
 
-#research-header:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 #project-block2{
     width: 58%;
 }
@@ -581,8 +577,9 @@ footer p {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 600;
+    color: white;
 }
 
 .desc-left{
