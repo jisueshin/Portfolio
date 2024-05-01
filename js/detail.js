@@ -48,6 +48,7 @@ if (currWork.detailDesc != null){
 
     let currImg = document.createElement("img");
     currImg.src = "assets/" + currWork.imageFile;
+    currImg.alt = currWork.imageAlt;
     detailMain.appendChild(currImg);
     currImg.setAttribute("class", "detail-img");
 
@@ -61,13 +62,11 @@ if (currWork.detailDesc != null){
     }
 }
 
-
 function revealImg(){
     let imgsList = document.querySelectorAll(".detail-img");
     const windowHeight = window.innerHeight; 
     for (const block of imgsList){
         blockHeight = block.getBoundingClientRect().top
-        console.log(blockHeight)
         /*close enough and should reveal */
         if (blockHeight < windowHeight - 150){
             block.style.opacity = 1;

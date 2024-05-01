@@ -1,10 +1,11 @@
 class work {
-    constructor(workTitle, workCourse, workDate, workTags, workImageFile, workType){
+    constructor(workTitle, workCourse, workDate, workTags, workImageFile, workImageAlt, workType){
         this.title = workTitle;
         this.course = workCourse;
         this.date = workDate;
         this.relTags = workTags;
         this.imageFile = workImageFile;
+        this.imageAlt = workImageAlt;
         this.workType = workType;
     }
 }
@@ -17,8 +18,9 @@ for (const workItem of allWork){
     let workDate = workItem.date;
     let workTags = workItem.relTags;
     let workImageFile = workItem.imageFile;
+    let workImageAlt = workItem.imageAlt;
     let workType = workItem.workType;
-    let workObject = new work(workTitle, workCourse, workDate, workTags, workImageFile, workType);
+    let workObject = new work(workTitle, workCourse, workDate, workTags, workImageFile, workImageAlt, workType);
 
     if (workItem.sampleDisplay == true){
         workObject.display = true;
@@ -52,7 +54,8 @@ function updateSampleDisplay(project, sampleBlock){
     /*updating image */
     sampleImage = sampleBlock.querySelector(".sample-image");
     sampleImage.src = "assets/" + project.imageFile;
-
+    sampleImage.alt = project.imageAlt;
+    
     /*updating title */
     sampleTitle = sampleBlock.querySelector(".sample-title");
     sampleTitle.innerText = project.title;
@@ -83,6 +86,7 @@ function updateWorkDisplay(sampleBlock){
     /*updating img */
     let currWorkImg = workBlock.querySelector(".work-img");
     currWorkImg.src = "assets/" + workItem.imageFile;
+    currWorkImg.alt = workItem.imageAlt;
     /*updating tags */
     let tagRow = workBlock.querySelector(".tag-row");
     for (const tagItem of workItem.relTags){
