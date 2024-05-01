@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>About Me</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
-    <link rel="stylesheet" href="css/style.css"> 
-    <script defer src="js/about-me.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  </head>
+    <head>
+        <title>About Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+        <link rel="stylesheet" href="css/style.css"> 
+        <script defer src="js/about-me.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
 
-  <body>
+    <body>
+        <nav>
+            <a href = "index.html" class = "logo">Adrian Shin</a>
+            <a href = "about-me.html">About me</a>
+            <a href = "work.html">Projects</a>
+        </nav>
 
-    <nav>
-        <a href = "index.html" class = "logo">Adrian Shin</a>
-        <a href = "about-me.html">About me</a>
-        <a href = "work.html">Projects</a>
-    </nav>
-
-    <div class = "about-container">
-        <img id = "me-pic" src = "assets/me.jpg" alt = "Adrian in New York!">
-        <div class = "about-text">
-            <h1 class = "about-greeting">Hi I'm Adrian!</h1>
-            <p class = "about-detail" id = "about-one"></p>
-            <p class = "about-detail" id = "about-two"></p>
-            <p class = "about-detail" id = "about-three"></p>
+        <!--flex box container for image and text-->
+        <div class = "about-container">
+            <img id = "me-pic" src = "assets/me.jpg" alt = "Adrian in New York!">
+            
+            <div class = "about-text">
+                <h1 class = "about-greeting">Hi I'm Adrian!</h1>
+                <!--paragraphs for text inputted on js-->
+                <p class = "about-detail" id = "about-one"></p>
+                <p class = "about-detail" id = "about-two"></p>
+                <p class = "about-detail" id = "about-three"></p>
+            </div>
         </div>
-    </div>
 
-    <footer>
-        <div class = "footer-text">
-            <p id = "footer-title">Let's keep in touch!</p>
-            <p>jisues@andrew.cmu.edu</p>
-        </div>
-    </footer>
+        <footer>
+            <div class = "footer-text">
+                <p id = "footer-title">Let's keep in touch!</p>
+                <p>jisues@andrew.cmu.edu</p>
+            </div>
+        </footer>
 
-</body>
+    </body>
 </html>
