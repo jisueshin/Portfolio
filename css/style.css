@@ -283,7 +283,8 @@ footer p {
     width: 250px;
 }
 
-/* detail page css */
+/* detail page css ********************************************************/
+/*detail header css */
 .detail-header{
     background-color: #3066BE;   
     padding-top: 5px;
@@ -332,10 +333,20 @@ footer p {
     justify-content: space-between;
 }
 
+/*detail main css */
+.detail-main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .detail-img{
     display: block;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+}
+
+.detail-para{
+    font-size: 20px;
 }
