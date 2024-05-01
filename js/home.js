@@ -55,7 +55,7 @@ function updateSampleDisplay(project, sampleBlock){
     sampleImage = sampleBlock.querySelector(".sample-image");
     sampleImage.src = "assets/" + project.imageFile;
     sampleImage.alt = project.imageAlt;
-    
+
     /*updating title */
     sampleTitle = sampleBlock.querySelector(".sample-title");
     sampleTitle.innerText = project.title;
@@ -72,7 +72,9 @@ function updateSampleDisplay(project, sampleBlock){
         tagDisplay.setAttribute("class", "HCI-tag");
         tagRow.appendChild(tagDisplay);
     }
-    /* TODO: update links!!!!!! */
+    /* updating links */
+    let sampleLink = sampleBlock.querySelector(".see-more");
+    sampleLink.href = "detail.html?work=" + project.course;
 }
 
 
