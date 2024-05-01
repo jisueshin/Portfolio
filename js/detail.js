@@ -27,8 +27,8 @@ currDate.innerText = currWork.date
 let currCourse = document.querySelector(".detail-course")
 currCourse.innerText = currWork.course
 
-let currImg = document.querySelector(".detail-img")
-currImg.src = "assets/" + currWork.imageFile
+/*let currImg = document.querySelector(".detail-img")
+currImg.src = "assets/" + currWork.imageFile*/
 
 let currTeam = document.querySelector(".detail-team")
 if (currWork.team != null){
@@ -40,30 +40,46 @@ const detailMain = document.querySelector(".detail-main")
 
 /*adding image after one paragraph */
 if (currWork.detailDesc != null){
-    for (const item of currWork.detailDesc){
-        let detailPara = document.createElement("p");
-        detailPara.innerText = item;
-        detailMain.appendChild(detailPara);
-        detailPara.setAttribute("class", "detail-para")
+    /*adding one paragraph */
+    let detailPara = document.createElement("p");
+    detailPara.innerText = currWork.detailDesc[0];
+    detailMain.appendChild(detailPara);
+    detailPara.setAttribute("class", "detail-para")
+
+    let currImg = document.createElement("img");
+    currImg.src = "assets/" + currWork.imageFile;
+    detailMain.appendChild(currImg);
+    currImg.setAttribute("class", "detail-img");
+
+    if (currWork.detailDesc.length > 1){
+        for (var i = 1; i < currWork.detailDesc.length; i++){
+            let detailPara = document.createElement("p");
+            detailPara.innerText = currWork.detailDesc[i];
+            detailMain.appendChild(detailPara);
+            detailPara.setAttribute("class", "detail-para")
+        }
     }
 }
 
-for (var i = 0; i < currWork.detailDesc.length; i++){
-    let detailPara = document.createElement("p");
-    if (i = 0){
-        detailPara.innerText = currWork.detailDesc[i];
-        detailMain.appendChild(detailPara);
-        let detailTestImage = document.createElement("img");
-        detailTestImage.src = "assets/" + currWork.imageFile;
-        detailTestImage.setAttribute("class", ".detail-img")
-        detailMain.appendChild(detailTestImage)
+
+function revealImg(){
+    let imgsList = document.querySelectorAll(".detail-img");
+    const windowHeight = window.innerHeight; 
+    for (const block of imgsList){
+        blockHeight = block.getBoundingClientRect().top
+        console.log(blockHeight)
+        /*close enough and should reveal */
+        if (blockHeight < windowHeight - 150){
+            block.style.opacity = 1;
+            /*block.style.transition = "opacity 0.5s ease"*/
+            block.style.transform = "translateY(0)"
+        }
+        /* not close should stay hidden */
+        else{
+            block.style.opacity = 0;
+            block.style.transform = "translateY(50px)"
+        }
     }
-    else{
-        detailPara.innerText = currWork.detailDesc[i];
-        detailMain.appendChild(detailPara);
-    }
-    /*let detailPara = document.createElement("p");
-    detailPara.innerText = item;
-    detailMain.appendChild(detailPara);
-    detailPara.setAttribute("class", "detail-para")*/
 }
+
+window.addEventListener("scroll", revealImg)

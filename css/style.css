@@ -37,6 +37,7 @@ nav{
     flex-grow: 1;
 }
 
+/*home page**************************************************************/
 .introduction{
     width: 80%;
     margin-left: auto;
@@ -84,6 +85,13 @@ nav{
     font-size: 20px;
 }
 
+.tag-row{
+    display: flex;
+    gap: 3%;
+    margin: 0;
+    padding: 0;
+}
+
 .HCI-tag{
     display: inline;
     width: fit-content;
@@ -112,7 +120,8 @@ nav{
 }
 
 .sample-image{
-    width: 400px;
+    width: 40%;
+    height: 100%;
 }
 
 .sample-text{
@@ -136,24 +145,6 @@ nav{
     /*justify-self: end;*/
 }
 
-/*
-.project-grid-test{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    margin-bottom: 100px;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-.project-grid-test .project-image{
-    width: 30%;
-    height: 250px;
-    object-fit: cover;
-}*/
-
-
 footer{
     margin-top: 100px;
     background-color: #3066BE; 
@@ -176,7 +167,97 @@ footer p {
     font-size: 30px;
     font-weight: 600;
 }
-/* work CSS */
+
+/*medium small, transitioning*/
+@media only screen and (max-width: 900px){
+    .introduction{
+        width: 90%;
+        margin-bottom: 130px;
+    }
+
+    #projects-intro{
+        width: 90%;
+    }
+
+    .sample-block{
+        width: 90%;
+    }
+
+    .tag-row{
+        display: none;
+    }
+
+    .sample-title{
+        font-size: 20px;
+    }
+
+    .sample-blurb{
+        font-size: 17px;
+    }
+
+    .see-more{
+        font-size: 15px;
+    }
+
+    .footer-text{
+        font-size: 17px;
+    }
+
+    #footer-title{
+        font-size: 20px;
+    }
+}
+
+/*extra small screens / mobile*/
+@media only screen and (max-width: 600px){
+    nav{
+        font-size: 20px;
+    }
+
+    .introduction{
+        width: 90%;
+        margin-bottom: 100px;
+    }
+
+    #greeting{
+        font-size: 40px;
+    }
+
+    #intro-text{
+        font-size: 25px;
+    }
+
+    #projects-intro{
+        width: 90%;
+        font-size: 30px;
+    }
+    
+    .sample-block{
+        flex-direction: column;
+        width: 90%;
+    }
+    .sample-image{
+        width: 100%;
+        height: 100%;
+    }
+
+    .sample-title{
+        font-size: 20px;
+    }
+
+    .sample-blurb{
+        font-size: 17px;
+    }
+
+    .tag-row{
+        display: none;
+    }
+
+    .see-more{
+        font-size: 15px;
+    }
+}
+/* work CSS ***************************************************************/
 
 .work-research{
     width: 80%;
@@ -214,13 +295,6 @@ footer p {
     font-weight: 600;
 }
 
-.tag-row{
-    display: flex;
-    gap: 3%;
-    margin: 0;
-    padding: 0;
-}
-
 .work-projects{
     width: 80%;
     margin-left: auto;
@@ -252,7 +326,7 @@ footer p {
     
 }
 
-/* about me CSS */
+/* about me CSS ********************************************************/
 .about-container{
     width: 80%;
     margin-right: auto;
@@ -338,13 +412,19 @@ footer p {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
 }
 .detail-img{
     display: block;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease; 
 }
 
 .detail-para{

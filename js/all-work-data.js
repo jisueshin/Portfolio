@@ -19,7 +19,12 @@ const allWork = [{
     "date": "Fall 2022",
     "relTags": ["Intl Relations", "Dec Science"],
     "imageFile": "Decision Science.jpg",
-    "workType": "research"
+    "workType": "research",
+    "detailDesc": ["The quest for North Korea's denuclearization has been a persistent challenge for successive U.S. presidents, highlighted by recent efforts during the Trump administration's historic summits with Kim Jong-un in Singapore and Hanoi. As the Biden administration takes the helm amidst a prolonged impasse in denuclearization efforts, lessons from past successes and failures may inform future diplomatic engagements with Kim Jong-un's regime.",
+    "Reflecting on past strategies, the divergent approaches of the Clinton and Bush administrations are noteworthy, with the Agreed Framework under Clinton achieving substantial progress before faltering due to unfulfilled promises, and the Bush administration's Comprehensive Approach failing to yield lasting results.",
+    "My research analyzed the denuclearization efforts of both administrations within a decision science framework, highlighting strengths in Clinton's approach and emphasizing the importance of understanding North Korea as a rational actor in diplomatic negotiations.",
+    "The Agreed Framework’s establishment of a trusted third-party institution, and its strategy of de-linkage were critical to its success. However, the Clinton administration bore significant domestic and global political risks in this pursuit, and ultimately, the Framework fell apart as the U.S. failed to deliver on its promised rewards. While the Bush administration’s Comprehensive Approach garnered political and financial support, it failed to accomplish any lasting progress on the Korean peninsula."
+]
 },
 {
     "title": "Amarah Case Study",
@@ -30,7 +35,12 @@ const allWork = [{
     "workType": "project",
     "sampleDisplay": true,
     "blurb": "Improving a local business's service design",
-    "team": "Alex Pravat, Tina Chen, Amanda Cheng"
+    "team": "Alex Pravat, Tina Chen, Amanda Cheng",
+    "detailDesc": ["Amarah is a boutique and fitness studio in Pittsburgh owned and operated by one person. Our team partnered with Amarah to investigate how the business’s service design could be innovated upon to allow for higher customer satisfaction and revenue.",
+    "There were six key pain points we identified with Amarah’s current service design: 1) limited brand awareness 2) lack of integration between the boutique and wellness services 3) poor marketing and promotion 4) inconsistent customer feedback 5) inadequate traffic to the online and physical store 6) seasonal sales fluctuations.",
+    "Among the 12 initial service propositions we developed, we were especially intrigued by the concept of monthly themes and subscription boxes. Our research indicated that monthly themes offered a viable, cost-effective marketing strategy for Amarah, providing value to both her and the community. Furthermore, we recognized that organizing the year into themed periods could enhance the appeal of regular subscription boxes, fostering consistent revenue streams and showcasing the boutique. Consequently, we merged these ideas to create our seasonal wellness and subscription box proposal.",
+    "To demonstrate how this proposition could be implemented, we developed service blueprints providing insight into logistical details of how subscriptions could be managed and what items could be included. This was complemented by promotional posters and advertisement to better visualize the idea to the client."
+]
 },
 {
     "title": "Learn Korean App",

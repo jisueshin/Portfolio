@@ -32,6 +32,7 @@ for (const workItem of allWork){
     workArray.push(workObject);
 }
 console.log(workArray)
+
 function addSampleWork(project){
     const template = document.querySelector("#sample-template");
     const clone = template.content.cloneNode(true);
@@ -97,7 +98,6 @@ function revealSamples(){
     const windowHeight = window.innerHeight; 
     for (const block of blocksList){
         blockHeight = block.getBoundingClientRect().top
-        console.log(blockHeight)
         /*close enough and should reveal */
         if (blockHeight < windowHeight - 100){
             block.style.opacity = 1;
