@@ -1,5 +1,7 @@
 # Portfolio
 Portfolio for PUI term project
-Link: 'jisueshin.github.io/Portfolio/'
+Deployed website: `https://jisueshin.github.io/Portfolio/` 
+Github Repository: `https://github.com/jisueshin/Portfolio`  
+
 
 
